@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>JQuery Traversing Documents</title>
+<!-- insert the script to reference jQuery here -->
+<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAfUDsqdhLaO0AsCnb6qYbQhTXZJsDCxAJOy8eUbFbCqS4IVbxKBQLJYxxJoZchFW12v7lH4VkUFSU_w
+"></script>
+<script type="text/javascript">
+	google.load("jquery", "1.4.2");
+</script>
+
+<!-- insert the script to display the Hello World message here -->
+<script type="text/javascript">
+	$("document").ready(function(){
+		// Add PDF icon 
+		$("a[href$=.pdf]").after("<img src='../images/adobe_pdf_icon.png' width='16' height='16' />");
+	});
+</script>
+
+<style type="text/css">
+	li {margin: 5pt 0 0 5pt;}
+</style>
+</head>
+
+<body>
+	<h1>Example: Automaic Insertion of Icons for PDF Links</h1>
+	<p>This example demonstrates how to examine the contents of a link to see if it points to a PDF file and automatically insert a PDF icon if it does.</p>
+
+	<ul class="navList" id="navlinks"> 
+		<li><a href="someurl.html">Link #1</a></li>
+		<li><a name="#namedAnchor">Named Anchor Link</a></li>
+		<li><a href="someurl.html">Link #2</a></li>
+		<li><a href="someurl.pdf">Link #3</a></li>
+		<li><a href="someurl.html">Link #4</a></li>
+		<li><a href="someurl.html">Link #5</a></li>
+		<li><a href="someurl.pdf">Link #6</a></li>
+		<li><a href="someurl.pdf">Link #7</a></li>
+		<li><a href="someurl.html">Link #8</a></li>
+		<li><a href="mailto:foo@yahoho.com">Email Link</a></li>
+	</ul>
+	
+</body>
+</html>

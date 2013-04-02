@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>JQuery Miscellaneous Events</title>
+<!-- insert the script to reference jQuery here -->
+<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAfUDsqdhLaO0AsCnb6qYbQhTXZJsDCxAJOy8eUbFbCqS4IVbxKBQLJYxxJoZchFW12v7lH4VkUFSU_w
+"></script>
+<script type="text/javascript">
+	google.load("jquery", "1.4.2");
+</script>
+
+<!-- insert the script to display the Hello World message here -->
+<script type="text/javascript">
+	$("document").ready(function(){
+		$("div").one("click", function(evt) {
+			$(this).css({background: "red", cursor:"auto"});
+		});
+
+		
+	});
+	
+
+	
+</script>
+
+<style type="text/css">
+	div {
+		width: 60px;
+		height: 60px;
+		margin: 10px;		
+		background: blue;
+		float: left;
+		border: 2px solid black;
+		cursor: pointer;
+
+	}
+	
+	p { font-size: 18pt; }
+
+</style>
+</head>
+
+<body>
+	<h1>JQuery Miscellaneous Events</h1>
+	<p> Click on each square to change color</p>	
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>JQuery UI - Accordion</title>
+<!-- insert the script to reference jQuery here -->
+<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAfUDsqdhLaO0AsCnb6qYbQhTXZJsDCxAJOy8eUbFbCqS4IVbxKBQLJYxxJoZchFW12v7lH4VkUFSU_w
+"></script>
+<script type="text/javascript">
+	google.load("jquery", "1.4.2");
+</script>
+
+<!-- jQuery UI Plugin (Custom) -->
+<link href="css/themes/smoothness/jquery.ui.all.css" rel="stylesheet" type="text/css">
+<link type="text/css" rel="stylesheet" href="css/themes/base/jquery.ui.all.css">
+<link type="text/css" href="css/themes/smoothness/jquery-ui-1.8.5.custom.css" rel="stylesheet" />
+<script src="js/jquery-ui-1.8.5.custom.min.js" type="text/javascript"></script>
+<!--<script src="js/ui/jquery.ui.core.js" type="text/javascript"></script>
+<script src="js/ui/jquery.ui.widget.js" type="text/javascript"></script>
+<script src="js/ui/jquery.ui.accordion.js" type="text/javascript"></script>-->
+
+
+
+<!-- insert the script to display the Hello World message here -->
+<script type="text/javascript">
+	$("document").ready(function(){
+		buildBookmarks('h3', 'header');	
+		
+	});
+	
+	function buildBookmarks(strWhichTag, sBookMarkNode) {
+		// Create bookmark list <ul> tag
+		var oList = $("<ul id='bookmarksList'>");
+		var cAnchorCount = 0;
+		
+		// Find all corresponding tags within div tags (excluding the onces contiained inside the header section
+		$("div:not([id=header]) " + strWhichTag).each(function() {
+			// Add anchor tags to headers
+			$(this).html("<a name='bookmark"+cAnchorCount+"'></a>" + $(this).html());
+			
+			// Add header to TOC list with links
+			oList.append("<li><a href='#bookmark" + cAnchorCount++ +"'> " + $(this).text() + "</a></li>");
+				
+		});
+		
+		// Add TOC to headr section
+		$("#" + sBookMarkNode).append(oList);
+	}
+	
+</script>
+<script type="text/ecmascript" language="javascript">
+	$("document").ready(function(){
+		// Accordion 
+		$("#accordion").accordion({ header: "h4" });
+
+	});
+</script>
+
+<style type="text/css">
+	#accordion h4 {
+		font-size: 12pt;
+		padding-left: 30px;
+		color: #cc0000;
+		font-weight: 12pt;
+	}
+	div, p {
+		font-size: 10pt;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+</style>
+</head>
+
+<body>
+	<div id="header">
+		<h1>Accordion Example</h1>
+		<h2>Using jQuery UI</h2>
+		<p id="byline">by Joe Marini</p>
+	</div>
+
+	<div id="intro">	
+		<h3>Introduction</h3>
+        	<div id="accordion">
+            	<div>
+                	<h4>Supposedly So</h4>
+					<p>Lorem ipsum eruditi oportere nec no, an vero justo democritum sea. Semper aliquid his ut, ea nec assum noluisse laboramus. Sed cu maluisset accusamus, an vidit populo mentitum qui, voluptatum disputationi at nam. Habeo augue conclusionemque cu nam, idque appetere molestiae in pro. In vim saepe intellegam. No vel aperiam eruditi, quot graecis duo ad, qui probo delicata vituperatoribus no. Veniam oportere eu has, sea in simul honestatis suscipiantur.</p>
+				</div>
+                <div>
+                	<h4>Start of Something New</h4>
+					<p>Cum nihil verterem ne, sit ea similique referrentur, ad ferri persequeris nec. Ius dictas admodum at. Ei falli meliore sea. Molestiae neglegentur sed ne, ad mei puto lorem deseruisse, ex nam posse forensibus consectetuer. Et ponderum vivendum eum, idque neglegentur in vis. Duo ut modus feugait molestiae, ei dicant utroque placerat sit, mutat falli consectetuer et ius. Expetenda repudiare repudiandae eam ne, reque impedit constituto mea no, facer novum efficiendi vel in.</p>
+            	</div>
+            </div>
+			<a href="#header" title="return to the top of the page">Back to top</a>
+	</div>	
+	
+	<div id="ingredients">
+	
+		<h3>Cum nihil verterem </h3>
+			<p>Idque feugait voluptaria et eum. Docendi volumus interpretaris vel ne, pri causae saperet honestatis ei, eu enim rebum invenire his. Meis mollis dolorum ne duo, has referrentur delicatissimi id. Te iudico soluta disputationi qui, illum verterem mea no, dico harum vim te.</p>
+			<p>Pro offendit insolens scribentur an, eu dicant gubergren eos. Ea usu malis vivendo scaevola, mea ea admodum persecuti. Alii agam labore sed ea, luptatum vulputate eu ius. Cu cum iusto regione reprehendunt. Dicat voluptua neglegentur mel et, te agam mundi dolore per.</p>
+		<p>Hinc natum paulo vis no, per graeco nusquam interpretaris cu. His at option nominati voluptatibus, eros nominavi disputationi sed eu. Quo posse invenire eu, te odio accusam recusabo sea. Labitur corpora has ea, ad has facete prompta percipitur. Malis postulant in eos, dicat reprimique consectetuer vix no, ei vim feugiat phaedrum efficiendi.</p>
+		<a href="#header" title="return to the top of the page">Back to top</a>
+	</div>
+	<div id="conclusion">
+		<h3>Sit ne diam ferri</h3>
+		<p>Ne odio adipisci vim, accusamus efficiantur pro in. Ne vim wisi tibique, nam amet puto no, nec ex virtute omittam. Pro no tota partiendo, eam velit liber in. No eam detraxit omittantur complectitur, no kasd eirmod ocurreret sit, putent posidonium no mei. Dico corpora adversarium et duo, dicant dolores detracto quo ei, ea ancillae definitionem nam. Vim cibo velit corpora no, ne officiis detraxit voluptaria per, vim at agam prodesset. Ex dicit lucilius cotidieque eam, no vix porro possim laboramus.</p>
+		<a href="#header" title="return to the top of the page">Back to top</a>
+	</div>
+</body>
+</html>

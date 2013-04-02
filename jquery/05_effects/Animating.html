@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>JQuery - Animating an Element</title>
+<!-- insert the script to reference jQuery here -->
+<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAfUDsqdhLaO0AsCnb6qYbQhTXZJsDCxAJOy8eUbFbCqS4IVbxKBQLJYxxJoZchFW12v7lH4VkUFSU_w
+"></script>
+<script type="text/javascript">
+	google.load("jquery", "1.4.2");
+</script>
+
+<!-- insert the script to display the Hello World message here -->
+<script type="text/javascript">
+	$("document").ready(function(){
+		$("#right").click( function() {
+			$("#theDiv").animate({width: "500px"}, 1000);
+		});
+		$("#text").click( function() {
+			$("#theDiv").animate({fontSize: "24pt"}, 1000);
+		});		
+		$("#toggle").click(function() {
+			$("#theDiv").animate({left: "500"}, 1000, "swing");
+			
+		});	
+		$("#multiple").click(function() {
+			$("#theDiv").animate({width: "400px", fontSize: "12pt", left: "10px"}, 1000, "linear");
+			
+		});			
+			
+	});
+	
+
+	
+</script>
+
+<style type="text/css">
+	div#theDiv {
+		width: 400px;
+		height: 180px;
+		background-color: #88aaee;
+		margin: 10px;
+		padding: 20px;
+		border: 2px solid black;
+		cursor: pointer;
+		position: relative;
+		left: 10px;
+		font-size: 12pt;
+		
+	}
+	p, span {
+		font-size: 16pt;
+	}
+	input {
+		margin: 5px;
+	}
+
+</style>
+</head>
+
+<body>
+	<h1>JQuery - Animation</h1>
+	<p>Animating an Element</p>
+<div id="theDiv">Animate Me</div>
+	
+	<form name="frm" >
+		<table border="0" cellpadding="0" cellspacing="0" widith="400">
+			<tr>
+				<td width="100" align="center"><input type="button"  id="right" value="Grow Right" /></td>
+				<td width="100" align="center"><input type="button"  id="text" value="Big Text" /></td>
+				<td width="100" align="center"><input type="button"  id="toggle" value="Move Div" /></td>
+				<td width="100" align="center"><input type="button"  id="multiple" value="Revert" /></td>
+			</tr>
+		</table>
+	</form>
+	
+
+	
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>JQuery - Fading an Element</title>
+<!-- insert the script to reference jQuery here -->
+<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAfUDsqdhLaO0AsCnb6qYbQhTXZJsDCxAJOy8eUbFbCqS4IVbxKBQLJYxxJoZchFW12v7lH4VkUFSU_w
+"></script>
+<script type="text/javascript">
+	google.load("jquery", "1.4.2");
+</script>
+
+<!-- insert the script to display the Hello World message here -->
+<script type="text/javascript">
+	$("document").ready(function(){
+		$("#fadein").click( function() {
+			$("#theDiv").fadeIn("normal");
+		});
+		$("#fadeout").click( function() {
+			$("#theDiv").fadeOut(4000, function() {alert("done fading out");});
+		});
+		$("#fadeto3").click( function() {
+			$("#theDiv").fadeTo("slow", 0.3);
+		});		
+		$("#fadeup").click( function() {
+			$("#theDiv").fadeTo("slow", 1.0);
+		});				
+	});
+	
+
+	
+</script>
+
+<style type="text/css">
+	div#theDiv {
+		width: 400px;
+		height: 180px;
+		background-color: Blue;
+		margin: 10px;
+		padding: 20px;
+		border: 2px solid black;
+		cursor: pointer;
+		
+	}
+	p, span {
+		font-size: 16pt;
+	}
+	input {
+		margin: 5px;
+	}
+
+</style>
+</head>
+
+<body>
+	<h1>JQuery - Animation</h1>
+	<p>Fading an Element</p>
+	<div id="theDiv"></div>
+	
+	<form name="frm" >
+		<table border="0" cellpadding="0" cellspacing="0" widith="400">
+			<tr>
+				<td width="100" align="center"><input type="button"  id="fadein" value="Fade In" /></td>
+				<td width="100" align="center"><input type="button"  id="fadeout" value="Fade Out" /></td>
+				<td width="100" align="center"><input type="button"  id="fadeto3" value="Fade To .3" /></td>
+				<td width="100" align="center"><input type="button"  id="fadeup" value="Fade To 1.0" /></td>
+			</tr>
+		</table>
+	</form>
+	
+
+	
+</body>
+</html>

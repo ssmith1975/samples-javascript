@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>JQuery Form Selectors</title>
+<!-- insert the script to reference jQuery here -->
+<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAfUDsqdhLaO0AsCnb6qYbQhTXZJsDCxAJOy8eUbFbCqS4IVbxKBQLJYxxJoZchFW12v7lH4VkUFSU_w
+"></script>
+<script type="text/javascript">
+	google.load("jquery", "1.4.2");
+</script>
+
+<!-- insert the script to display the Hello World message here -->
+<script type="text/javascript">
+	$("document").ready(function(){
+
+		//$("form :input").before("INPUT: "); 
+		//$("form :text").before("TEXT: "); 
+		//$("form :text:enabled").before("ENABLED: ");
+		//$("form :checked").before("CHECKED: ");
+		$("form :checkbox:checked").before("CHECKED: ");
+		
+	});
+</script>
+
+<style type="text/css">
+	.style1 { width: 200px; }
+	.style2 { width: 600px; }
+</style>
+</head>
+
+<body>
+<h1>Example Form Document</h1>
+<form action="" method="get" enctype="multipart/form-data" name="frmSelectors">
+<table border="1" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="style1">First Name</td>
+		<td class="style2"><input type="text" name="txtFirstName" id="txtFirstName" /></td>
+	</tr>
+	<tr>
+		<td class="style1">Last Name</td>
+		<td class="style2"><input name="txtLastName" type="text" /></td>
+	</tr>
+	<tr>
+		<td class="style1">Disabled</td>
+		<td class="style2"><input type="text" name="txtDisabled" id="txtDisabled" disabled="disabled" /></td>
+	</tr>
+	<tr>
+		<td class="style1">Gender</td>
+		<td class="style2">
+			
+				<label>
+					<input type="radio" name="RadioGroup1" value="male" id="RadioGroup1_0" />
+					M</label>
+				
+				<label>
+					<input name="RadioGroup1" type="radio" id="RadioGroup1_1" value="female" checked="checked" />
+					F</label>			</td>
+	</tr>
+	<tr>
+		<td class="style1">What products are you interested in?</td>
+		<td class="style2">
+					<input name="chbWdgets" type="checkbox" id="chbWdgets" checked="checked" />Widgets<br />
+					<input type="checkbox" name="chbHibbityJibbity" id="chbHibbityJibbity" />Hibbity Jibbity<br />
+					<input name="chbSplashBangers" type="checkbox" id="chbSplashBangers" checked="checked" />SplashBangers<br />
+					<input type="checkbox" name="chbWhatzits" id="chbWhatzits" />Whatzits<br />		</td>
+	</tr>
+	<tr>
+		<td class="style1">Comments:</td>
+		<td class="style2"><textarea name="comments" cols="50" rows="5" id="comments"></textarea></td>
+	</tr>
+	<tr>
+		<td class="style1">Optional life story file</td>
+		<td class="style2"><input type="file" name="fileField" id="fileField" /></td>
+	</tr>
+	<tr>
+		<td class="style1">&nbsp;</td>
+		<td class="style2">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="style1">&nbsp;</td>
+		<td class="style2"><input type="submit" name="button" id="submit" value="submit" />
+			
+			<input type="reset" name="reset" id="reset" value="reset" /></td>
+	</tr>
+</table>
+
+
+</form>
+	
+	
+</body>
+</html>

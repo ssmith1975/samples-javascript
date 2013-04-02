@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>JQuery - Using jQuery to strip and hover-highlight a table</title>
+<!-- insert the script to reference jQuery here -->
+<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAfUDsqdhLaO0AsCnb6qYbQhTXZJsDCxAJOy8eUbFbCqS4IVbxKBQLJYxxJoZchFW12v7lH4VkUFSU_w
+"></script>
+<script type="text/javascript">
+	google.load("jquery", "1.4.2");
+</script>
+
+<!-- insert the script to display the Hello World message here -->
+<script type="text/javascript">
+	$("document").ready(function(){
+		$("#theList tr:even").addClass("stripe1");
+		$("#theList tr:odd").addClass("stripe2");
+		$("#theList tr").hover(function() {
+			$(this).toggleClass("highlight");
+		}, function() {
+			$(this).toggleClass("highlight");
+		});
+		
+	});	
+	
+
+	
+</script>
+
+<style type="text/css">
+	th, td {
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 18px;
+		color: #000000;
+	}
+	
+	tr {
+		border: 1px solid gray;
+	}
+	
+	td {
+		width: 200px;
+		padding: 3px;
+	}
+	
+	th {
+		background-color: #d2e0e8;
+		color: #003366;
+	}
+	
+	table {
+		border: 1pt solid gray;
+	}
+	
+	.clickable {
+		cursor: pointer;
+	}
+	
+	.stripe1 {
+		background-color: #0f0;
+	}
+	.stripe2 {
+		background-color: #afa;
+	}
+	.highlight {
+		background-color: #ccff00;
+		font-weight: bold;
+	}
+	
+</style>
+</head>
+
+<body>
+	<h1>JQuery - Using jQuery to strip and hover-highlight a table</h1>
+
+	<table cellpadding="3" cellspacing="1" id="theList">
+		<tr>
+			<th>Item</th>
+			<th>Price</th>
+		</tr>
+		<tr>
+			<td>Milk</td>
+			<td>1.99</td>
+		</tr>
+		<tr>
+			<td>Eggs</td>
+			<td>2.29</td>
+		</tr>		
+		<tr>
+			<td>Butter</td>
+			<td>3.49</td>
+		</tr>		
+		<tr>
+			<td>Bread</td>
+			<td>0.99</td>
+		</tr>
+		<tr>
+			<td>Pasta</td>
+			<td>1.19</td>
+		</tr>		
+		<tr>
+			<td>Honey</td>
+			<td>4.39</td>
+		</tr>		
+		<tr>
+			<td>Cookies</td>
+			<td>2.99</td>
+		</tr>
+		<tr>
+			<td>Apples</td>
+			<td>0.59</td>
+		</tr>		
+		<tr>
+			<td>Sugar</td>
+			<td>1.78</td>
+		</tr>		
+		<tr>
+			<td>Pepper</td>
+			<td>1.56</td>
+		</tr>		
+								
+	</table>
+	
+</body>
+</html>
