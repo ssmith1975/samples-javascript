@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+
+	html, body { 
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	body {
+		font-family: "Trebuchet MS", Arial, sans-serif;
+		font-size: 16px;
+	}
+	
+	#wrapper {
+		width: 940px;
+		margin: 0px auto;
+		padding: 20px;
+		
+	}
+	
+	#header {
+		border-bottom: 3px dotted #0072bc;
+	
+	}
+	#footer {
+		background-color: #0072bc;
+		color: #fff;
+		font-size: .8em;
+		width: 960px;
+		margin: 0px auto;
+		padding: 0px 10px 10px 10px;		
+		
+	}
+	#footer h4 {
+		background-color: #6dcff6;
+		color: #0072bc;
+		padding: 5px;
+		font-weight: bold;
+		font-size: 1.15em;
+	}
+	#footer a {
+		color: #6dcff6;
+		text-decoration: none;
+	}
+	#footer a:hover {
+		color:#CCFFFF;
+	}
+	#footer a:visited {
+		color: #33CCCC;
+	}
+	
+	.col-3 {
+		width: 300px;
+		float: left;
+		margin: 0px 10px;
+		padding:top: 0px;
+	}
+	#footer .col-3 {
+		min-height: 100px;
+	}
+	.last {
+		clear: right;
+		
+	}
+	h1 {
+		font-size: 1.25em;
+		color: #0072bc;
+	}
+	h2 {
+		font-size: 1.2em;
+		color: #6dcff6;
+	}
+	h3 {
+		font-size: 1.1em;
+		color: #aaa;
+	}
+	p {
+		font-size: 12pt;
+		font-size: 1em;
+		line-height: 1.5em;
+	}
+	.clear {
+		clear: both;
+		height: 1px;
+	}	

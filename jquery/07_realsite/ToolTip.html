@@ -2,27 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
 <title>JQuery -Tooltip</title>
+<link rel="stylesheet" type="text/css" href="../css/styles.css"/>
 <!-- insert the script to reference jQuery here -->
 <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAfUDsqdhLaO0AsCnb6qYbQhTXZJsDCxAJOy8eUbFbCqS4IVbxKBQLJYxxJoZchFW12v7lH4VkUFSU_w
 "></script>
 <script type="text/javascript">
 	google.load("jquery", "1.4.2");
 </script>
-
 <!-- jQuery UI Plugin (Custom) -->
 <link type="text/css" rel="stylesheet" href="css/themes/base/jquery.ui.all.css">
 <link type="text/css" href="css/themes/smoothness/jquery-ui-1.8.5.custom.css" rel="stylesheet" />
 <script src="js/jquery-ui-1.8.5.custom.min.js" type="text/javascript"></script>
-
-
-
 <!-- insert the script to display the Hello World message here -->
 <script type="text/javascript">
 	$("document").ready(function(){
 	
-		$("#commentsArea").resizable();
+		//$("#commentsArea").resizable();
 		// Tooltip Display
 		
 		$("#viewlarger").hover(
@@ -43,78 +39,133 @@
 	});
 
 </script>
-
-
 <style type="text/css">
+/*
 	#commentsArea { width: 150px; height: 150px; padding: 0.5em; }
 	#commentsArea h3 { text-align: center; margin: 0; }
-	
+	*/
 	p {
-		font-size: 12pt;
+	font-size: 12pt;
+}
+#gearItem {
+	width: 600px;
+	height: 300px;
+	border: 1px solid #ccc;
+}
+#photoShow {
+	float: right;
+	margin-left: 25px;
+	position: relative;
+	width: 400px;
+	height: 400px;/* margin-left: auto; */
 	}
-	#gearItem {
-		width: 600px;
-		height: 300px;
-		border: 1px solid #ccc;
-	}
-	#photoShow  {
-		float: right;
-		margin-left: 25px;
-		
-		position: relative;
-		width: 125px;
-		height: 124px;
-		/* margin-left: auto; */
-	}
-
-	.tooltipContent {
-		position: absolute;
-		display: none;
-		opacity: 0.0;
-	}
-	.gallery {
-		border: none;
-	}
+.tooltipContent {
+	position: absolute;
+	display: none;
+	opacity: 0.0;
+}
+.gallery {
+	border: none;
+}
 </style>
 </head>
-
 <body>
+<div id="wrapper">
 	<div id="header">
 		<h1>JQuery - Tooltip Example</h1>
 		<h2>Using jQuery to Display Tooltips</h2>
 		<p id="byline">by Joe Marini</p>
 	</div>
-	<div id="gearItem">
-		<img src="images/set2.jpg"  alt="Photo Gallery 2" width="125" height="124" class="gallery" />
-		
+	<div id="gearItem"> <img src="images/ssmith1975_com_01_75.jpg"  alt="Photo Gallery 2" width="75" height="75" class="gallery" />
 		<p>View larger: <a href="#" id="viewlarger">[+]</a></p>
-		
-		
+		<!--
 			<div id="commentsArea" class="ui-widget-content">
 				<h3 class="ui-widget-header">Resizable</h3>
 			</div>
-		
-</div>
-<div id="intro">	
+		-->
+	</div>
+	<div id="intro">
 		<h3>Introduction</h3>
-
-		
-        	<div id="accordion">
-            	<div>
-                	<h4>Supposedly So</h4>
-					<p>Lorem ipsum eruditi oportere nec no, an vero justo democritum sea. Semper aliquid his ut, ea nec assum noluisse laboramus. Sed cu maluisset accusamus, an vidit populo mentitum qui, voluptatum disputationi at nam. Habeo augue conclusionemque cu nam, idque appetere molestiae in pro. In vim saepe intellegam. No vel aperiam eruditi, quot graecis duo ad, qui probo delicata vituperatoribus no. Veniam oportere eu has, sea in simul honestatis suscipiantur.</p>
-				</div>
-                <div>
-                	<h4>Start of Something New</h4>
-					<p>Cum nihil verterem ne, sit ea similique referrentur, ad ferri persequeris nec. Ius dictas admodum at. Ei falli meliore sea. Molestiae neglegentur sed ne, ad mei puto lorem deseruisse, ex nam posse forensibus consectetuer. Et ponderum vivendum eum, idque neglegentur in vis. Duo ut modus feugait molestiae, ei dicant utroque placerat sit, mutat falli consectetuer et ius. Expetenda repudiare repudiandae eam ne, reque impedit constituto mea no, facer novum efficiendi vel in.</p>
-            	</div>
-            </div>
-			<a href="#header" title="return to the top of the page">Back to top</a>
-	</div>	
-	
-
-<div class="tooltipContent" id="tooltip1">
-	<img src="images/set2-large.jpg"  alt="Photo Gallery 2" class="gallery" />
+		<div id="accordion">
+			<div>
+				<h4>Supposedly So</h4>
+				<p>Lorem ipsum eruditi oportere nec no, an vero justo democritum sea. Semper aliquid his ut, ea nec assum noluisse laboramus. Sed cu maluisset accusamus, an vidit populo mentitum qui, voluptatum disputationi at nam. Habeo augue conclusionemque cu nam, idque appetere molestiae in pro. In vim saepe intellegam. No vel aperiam eruditi, quot graecis duo ad, qui probo delicata vituperatoribus no. Veniam oportere eu has, sea in simul honestatis suscipiantur.</p>
+			</div>
+			<div>
+				<h4>Start of Something New</h4>
+				<p>Cum nihil verterem ne, sit ea similique referrentur, ad ferri persequeris nec. Ius dictas admodum at. Ei falli meliore sea. Molestiae neglegentur sed ne, ad mei puto lorem deseruisse, ex nam posse forensibus consectetuer. Et ponderum vivendum eum, idque neglegentur in vis. Duo ut modus feugait molestiae, ei dicant utroque placerat sit, mutat falli consectetuer et ius. Expetenda repudiare repudiandae eam ne, reque impedit constituto mea no, facer novum efficiendi vel in.</p>
+			</div>
+		</div>
+		<a href="#header" title="return to the top of the page">Back to top</a> </div>
+	<div class="tooltipContent" id="tooltip1"> <img src="images/ssmith1975_com_01.jpg"  alt="Photo Gallery 2" class="gallery" /> </div>
 </div>
+
+<!-- Begin Footer -->	
+<div id="footer">
+
+	<div class="col-3">
+		<h4>Overview</h4>
+		<ul>
+			<li><a href="../01_overview/FirstjQueryPage.html" target="_blank">First jQuery Page</a></li>
+		</ul>
+	</div>
+	<div class="col-3">
+		<h4>Retrieving</h4>
+		<ul>
+			<li><a href="../02_retrieving/BasicSelectors.html">Basic Selectors</a></li>
+			<li><a href="../02_retrieving/BasicFilters.html" target="_blank">Basic Filters</a></li>
+			<li><a href="../02_retrieving/AttrFilters.html">Attribute Filters</a></li>
+			<li><a href="../02_retrieving/ChildVisCont.html">Child/Visual/Container</a></li>
+			<li><a href="../02_retrieving/AutoPDFIcon.html">Auto PDF Icon</a></li>
+			<li><a href="../02_retrieving/FormSelectors.html">Form Selectors</a></li>
+			<li><a href="../02_retrieving/Traversing.html">Traversing</a></li>
+		</ul>
+	</div>
+	<div class="col-3 last">
+		<h4>Manipulating</h4>
+		<ul>
+			<li><a href="../03_manipulating/Creating.html" target="_blank">Creating </a></li>
+			
+			<li><a href="../03_manipulating/Inserting.html">Inserting</a></li>
+			<li><a href="../03_manipulating/Wrapping.html">Wrapping</a></li>
+			<li><a href="../03_manipulating/Attributes.html">Attributes</a></li>
+			<li><a href="../03_manipulating/CSS_Sizing.html">CSS Sizing</a></li>
+			<li><a href="../03_manipulating/Auto_TOC.html">Auto TOC</a></li>
+		</ul>
+	</div>	
+	<div class="clear"></div>	
+	<div class="col-3">
+		<h4>Events</h4>
+		<ul>
+			<li><a href="../04_events/Binding.html" target="_blank">Binding</a></li>	
+			<li><a href="../04_events/Helper.html" target="_blank">Helper</a></li>
+			<li><a href="../04_events/MiscEvents.html">Miscellaneous Events</a></li>
+			<li><a href="../04_events/TableStripe.html">Table Stripes</a></li>
+		</ul>
+	</div>		
+	<div class="col-3">
+		<h4>Effects</h4>
+		<ul>
+			<li><a href="../05_effects/ShowHide.html" target="_blank">Show/Hide</a></li>
+			<li><a href="../05_effects/Sliding.html">Sliding</a></li>
+			<li><a href="../05_effects/Animating.html">Animating</a></li>
+		</ul>
+	</div>
+
+	<div class="col-3 last">
+	
+		<h4>UI Plugins</h4>
+		<ul>
+			<li><a href="Accordion.html" target="_blank">Accordion</a></li>
+			<li><a href="ImageRotator.html" target="_blank">Image Rotator</a></li>
+			<li><a href="ToolTip.html" target="_blank">Tool Tip</a></li>
+		</ul>
+	</div>
+
+	
+	<div class="clear"></div>	
+</div>
+<!-- End Footer -->	
+
 </body>
 </html>

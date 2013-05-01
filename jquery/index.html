@@ -3,7 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>Flex 3 Dev</title>
+<title>jQuery Dev</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
 <!-- insert the script to reference jQuery here -->
 <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAfUDsqdhLaO0AsCnb6qYbQhTXZJsDCxAJOy8eUbFbCqS4IVbxKBQLJYxxJoZchFW12v7lH4VkUFSU_w
 "></script>
@@ -19,22 +20,23 @@
 </script>
 
 <style type="text/css">
-	body { font-family: Arial, Helvetica, sans-serif; color: #000; }
-	h1 { font-size: 24px; color: #0066CC; }
+
 	a { color: #006633;font-weight: bold; text-decoration: none; }
 	a:visited {color: #666666;}
 	a:hover { color: #99CC33; text-decoration: underline; }
 	 p, li {  font-size: 14px; }
 	 
-	 #wrapper { width: 900px; margin: 0 auto; padding: 10px; border: 1px solid #ccc; }
+
 
 </style>
 </head>
 
 <body>
 	<div id="wrapper">
-	
+		<div id="header">
 		<h1>jQuery Dev</h1>
+		</div>
+		<div id="content">
 		<p>List of projects in jQuery based on tutorials from <a href="http://www.lynda.com">lynda.com</a>.</p>
 		
 		<h3>Overview</h3>
@@ -48,10 +50,10 @@
 			<li><a href="02_retrieving/BasicSelectors.html">Basic Selectors</a></li>
 			<li><a href="02_retrieving/BasicFilters.html" target="_blank">Basic Filters</a></li>
 			<li><a href="02_retrieving/AttrFilters.html">Attribute Filters</a></li>
-			<li><a href="components/CallComponentFunctions.html" target="_blank">Traversing</a></li>
-			<li><a href="components/UsePropertyValue.html" target="_blank">Form Selectors</a></li>
 			<li><a href="02_retrieving/ChildVisCont.html">Child/Visual/Container</a></li>
 			<li><a href="02_retrieving/AutoPDFIcon.html">Auto PDF Icon</a></li>
+			<li><a href="02_retrieving/FormSelectors.html">Form Selectors</a></li>
+			<li><a href="02_retrieving/Traversing.html">Traversing</a></li>			
 		</ul>
 		
 		<h3>Manipulating</h3>
@@ -70,9 +72,7 @@
 		<h3>Events</h3>
 		<ul>
 			<li><a href="04_events/Binding.html" target="_blank">Binding</a></li>	
-			<li><a href="events/AddEventListenerDemo.html" target="_blank">Event Object</a></li>
 			<li><a href="04_events/Helper.html" target="_blank">Helper</a></li>
-	
 			<li><a href="04_events/MiscEvents.html">Miscellaneous Events</a></li>
 			<li><a href="04_events/TableStripe.html">Table Stripes</a></li>
 		</ul>
@@ -80,7 +80,6 @@
 		<h3>Effects</h3>
 		<ul>
 			<li><a href="05_effects/ShowHide.html" target="_blank">Show/Hide</a></li>
-			<li><a href="flexcss/PhotoAlbum.html" target="_blank">Fade Effect</a></li>
 			<li><a href="05_effects/Sliding.html">Sliding</a></li>
 			<li><a href="05_effects/Animating.html">Animating</a></li>
 		</ul>
@@ -88,11 +87,79 @@
 		<h3>UI Plugins</h3>
 		<ul>
 			<li><a href="07_realsite/Accordion.html" target="_blank">Accordion</a></li>
-			<li><a href="navigation/ViewStackDemoWithBar.html" target="_blank">Image Rotator</a></li>
-			<li><a href="navigation/ViewStateDemo.html" target="_blank">Tooltip</a></li>
+			<li><a href="07_realsite/ImageRotator.html" target="_blank">Image Rotator</a></li>
+			<li><a href="07_realsite/ToolTip.html" target="_blank">Tool Tip</a></li>
 		</ul>		
 		
-		<h3>&nbsp;</h3>
-</div>			
+	</div>		
+</div>
+<!-- Begin Footer -->	
+<div id="footer">
+
+	<div class="col-3">
+		<h4>Overview</h4>
+		<ul>
+			<li><a href="01_overview/FirstjQueryPage.html" target="_blank">First jQuery Page</a></li>
+		</ul>
+	</div>
+	<div class="col-3">
+		<h4>Retrieving</h4>
+		<ul>
+			<li><a href="02_retrieving/BasicSelectors.html">Basic Selectors</a></li>
+			<li><a href="02_retrieving/BasicFilters.html" target="_blank">Basic Filters</a></li>
+			<li><a href="02_retrieving/AttrFilters.html">Attribute Filters</a></li>
+			<li><a href="02_retrieving/ChildVisCont.html">Child/Visual/Container</a></li>
+			<li><a href="02_retrieving/AutoPDFIcon.html">Auto PDF Icon</a></li>
+			<li><a href="02_retrieving/FormSelectors.html">Form Selectors</a></li>
+			<li><a href="02_retrieving/Traversing.html">Traversing</a></li>				
+		</ul>
+	</div>
+	<div class="col-3 last">
+		<h4>Manipulating</h4>
+		<ul>
+			<li><a href="03_manipulating/Creating.html" target="_blank">Creating </a></li>
+			
+			<li><a href="03_manipulating/Inserting.html">Inserting</a></li>
+			<li><a href="03_manipulating/Wrapping.html">Wrapping</a></li>
+			<li><a href="03_manipulating/Attributes.html">Attributes</a></li>
+			<li><a href="03_manipulating/CSS_Sizing.html">CSS Sizing</a></li>
+			<li><a href="03_manipulating/Auto_TOC.html">Auto TOC</a></li>
+		</ul>
+	</div>	
+	<div class="clear"></div>	
+	<div class="col-3">
+		<h4>Events</h4>
+		<ul>
+			<li><a href="04_events/Binding.html" target="_blank">Binding</a></li>	
+			<li><a href="04_events/Helper.html" target="_blank">Helper</a></li>
+			<li><a href="04_events/MiscEvents.html">Miscellaneous Events</a></li>
+			<li><a href="04_events/TableStripe.html">Table Stripes</a></li>
+		</ul>
+	</div>		
+	<div class="col-3">
+		<h4>Effects</h4>
+		<ul>
+			<li><a href="05_effects/ShowHide.html" target="_blank">Show/Hide</a></li>
+			<li><a href="05_effects/Sliding.html">Sliding</a></li>
+			<li><a href="05_effects/Animating.html">Animating</a></li>
+		</ul>
+	</div>
+
+	<div class="col-3 last">
+	
+		<h4>UI Plugins</h4>
+		<ul>
+			<li><a href="07_realsite/Accordion.html" target="_blank">Accordion</a></li>
+			<li><a href="07_realsite/ImageRotator.html" target="_blank">Image Rotator</a></li>
+			<li><a href="07_realsite/ToolTip.html" target="_blank">Tool Tip</a></li>
+		</ul>
+	</div>
+
+	
+	<div class="clear"></div>	
+</div>
+<!-- End Footer -->
+
+			
 </body>
 </html>
