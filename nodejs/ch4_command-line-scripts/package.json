@@ -1,0 +1,17 @@
+{
+  "name": "ch4_command-line-scripts",
+  "version": "0.0.0",
+  "description": "Read and right via command line",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies" : {
+	"optimist" : "0.6.0",
+	"jshint" : "2.3.0"
+	
+  },
+
+  "author": "S Smith",
+  "license": "BSD"
+}

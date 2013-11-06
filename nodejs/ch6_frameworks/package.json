@@ -1,0 +1,16 @@
+{
+  "name": "ch6_frameworks",
+  "version": "0.0.0",
+  "description": "Dealing with frameworks such as express and ejs",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies" : {
+	"express" : "3.4.4",
+	"ejs" : "0.8.4",
+	"handlebars" : "1.1.2"
+  },
+  "author": "",
+  "license": "BSD"
+}
