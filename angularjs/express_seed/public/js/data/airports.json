@@ -1,0 +1,43 @@
+{
+	"PDX" : {
+		"_id"  : "PDX",
+		"code" : "PDX",
+		"name" : "Portland International Airport",
+		"city" : "Portland",
+		"destinations" : [
+			"LAX",
+			"SFO"
+		]
+	},
+	"LAX" : {
+		"_id"  : "LAX",
+		"code" : "LAX",
+		"name" : "Los Angeles International",
+		"city" : "Los Angeles",
+		"destinations" : [
+			"PDX",
+			"STL"
+		]
+	},
+	"SFO" : {
+		"_id"  : "SFO",
+		"code" : "SFO",
+		"name" : "San Francisco International",
+		"city" : "San Francisco",
+		"destinations" : [
+			"PDX",
+			"LAX"
+		]
+	},
+
+	"STL" : {
+		"_id"  : "STL",
+		"code" : "STL",
+		"name" : "Lambert St Louis International",
+		"city" : "St Louis ",
+		"destinations" : [
+			"PDX",
+			"LAX"
+		]
+	}		
+}	

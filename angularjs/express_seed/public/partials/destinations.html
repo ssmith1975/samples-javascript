@@ -1,0 +1,10 @@
+      <div class="pull-left span6">
+        <h3>Destinations</h3>
+        <ul ng-repeat="airport in airports">
+          <li><a href="" ng-click="setAirport(airport.code)">{{airport.code}} - {{airport.city | uppercase}}</a> (<a href="" ng-click="editAirport(airport.code)">Edit</a>)</li>
+        
+        </ul>
+        
+      </div>
+      <div class="span5" ng-include src="sidebarURL"></div>
+      <div class="span12" ng-include src="formURL"></div>

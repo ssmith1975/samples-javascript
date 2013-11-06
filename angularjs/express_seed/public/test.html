@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Test Page</title>
+<!-- -->
+  <link rel="stylesheet" href="css/bootstrap.css"/>
+  <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
+ 
+  <style type="text/css">
+    .container {
+      clear: both;
+      margin: 0 auto;
+
+    }
+
+    .grid-container {
+      width: 490px; 
+      background-color: #eee;
+      padding: 20px;
+      margin: 0 auto;
+           
+    }
+    ul.grid {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px; 
+    }
+    /* Grid Cell */
+    ul.grid li {
+      float: left;
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      margin: 0px;
+      padding: 9px;
+      border-right: 1px dashed #888;
+      border-bottom: 1px dashed #888;     
+    }
+    /* Grid First Column */
+    ul.grid li:nth-of-type(3n + 1){
+      margin-left: 0px;
+      padding-left: 0px;
+      border-left: none;
+    }
+
+    /* Grid Last Column */
+    ul.grid li:nth-of-type(3n){
+      margin-right: 0px;
+      padding-right: 0px;
+      border-right: none;
+    }
+
+    /* Grid First Row */
+    ul.grid li:nth-of-type(-n+3){
+      margin-top: 0px;
+      padding-top: 0px;
+      border-top: none;
+    }   
+
+    /* Grid Last Row */
+    ul.grid li:nth-last-of-type(-n+3){
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+      border-bottom: none;
+    }
+
+    /* Inner Cell */
+    ul.grid li .cell{
+      width: 100%;
+      height: 100%;
+      line-height: 150px;
+      font-size: 400%;
+      color: #888;
+      background-color: #f8f8f8;  
+    }
+    /* Clear fix */
+
+  </style>
+
+</head>
+<body>
+    <div class="container">
+      <h1>Test Page</h1>
+  
+        <div class="grid-container">
+          <ul class="grid clearfix">
+              <li><div class="cell">A</div></li>
+              <li><div class="cell">B</div></li>
+              <li><div class="cell">C</div></li>
+              <li><div class="cell">D</div></li>
+              <li><div class="cell">E</div></li>
+              <li><div class="cell">F</div></li>
+              <li><div class="cell">G</div></li>
+              <li><div class="cell">H</div></li>
+              <li><div class="cell">I</div></li>              
+          </ul>
+          
+        </div><!-- ./grid -->
+    
+    </div><!-- ./container -->
+
+  </body>
+</html>
