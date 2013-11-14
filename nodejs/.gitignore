@@ -1,9 +1,0 @@
-logs/*
-!.gitkeep
-
-*/node_modules/*
-
-
-*.zip
-*.tgz
-*.tar
