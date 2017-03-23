@@ -1,0 +1,18 @@
+﻿<% include header.ejs %>
+<h1>Thank you!</h1>
+<div>
+	<p>Thanks for your suggestion...</p>
+	<p>In the meantime, here's a copy of your recipe:</p>
+
+	<h2>Recipe title: <%= name %></h2>
+	<h2>Ingredients</h2>
+	<pre>
+	<%= ingredients %>
+	</pre>
+	<h2>Directions</h2>
+	<pre>
+	<%= directions %>
+	</pre>
+
+</div>
+<% include footer.ejs %>

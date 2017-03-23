@@ -161,3 +161,16 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+
+
+############
+## Node.js
+############
+
+angularjs-basic/Scripts/i18n/
+angularjs/express_seed/
+cors/CORS Demo/packages/
+nodejs/ch5_web-servers/reading-request-data/node_modules/
+nodejs/ch5_web-servers/using-connect/node_modules/
+
+**/node_modules/**

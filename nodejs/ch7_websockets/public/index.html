@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>NodeJS &mdash; Chatroom</title>
+    <script type="text/javascript" charset="utf-8" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script type="text/javascript" charset="utf-8">
+       
+ 
+
+        
+        $(document).ready( function () {
+            var socket = io.connect('http://localhost:3000');
+            var old_username;
+
+            var log_chat_message = function (message, type) {
+                var msg = $('<li />').html(message);
+
+                if (type.toLowerCase() === 'system') {
+                    msg.css({ 'font-weight': 'bold', 'color': '#888', 'font-family': 'Courier New' });
+                } else if (type.toLowerCase() === 'leave') {
+                    msg.css({ 'font-weight': 'bold', 'color': '#c00', 'font-family': 'Courier New' });
+                } 
+
+                $('#chat_log').append(msg);
+
+            };
+
+            socket.on('entrance', function (data) {           
+                //document.write('<p>' + data.message + '</p>');
+                log_chat_message(data.message, 'system'); 
+            });
+
+            socket.on('exit', function (data) {
+                
+                log_chat_message(data.message, 'leave'); 
+            });
+
+            socket.on('chat', function (data) {
+               
+                log_chat_message(data.message, ''); 
+
+            });
+
+            socket.on('change_username', function (data) {
+                
+                log_chat_message(data.message, 'system');
+
+            });
+
+            $('#chat_username').keypress(function (event) {
+                var chat_username =  $('#chat_username').val();
+                if ( event.which == 13 ) {
+
+
+                    if (chat_username) {
+                        socket.emit('change_username', { new_username: $('#chat_username').val() });
+                        old_username = chat_username;
+                        $('#chat_box').focus();
+                    } else {
+                        $('#chat_username').val('guest');
+                    }
+                       
+
+                } /*else if (!chat_username) {
+                   
+                    $('#chat_username').val('guest');
+                }*/
+            });
+
+            $('#chat_box').keypress(function (event) {
+                if (event.which == 13) {
+                    if( $('#chat_box').val() ) {
+                        socket.emit('chat', {message: $('#chat_box').val() });
+                        $('#chat_box').val('');
+                        $('#chat_box').trigger("scroll");
+                    }
+                }
+            });
+        });
+
+
+        // Type into the developer tool console.: socket.emit('chat', {message: 'I hate you!'});  
+    </script>
+    <style type="text/css" media="screen">
+        body {
+            font-family: Arial, helvetica,sans-serif;
+        }
+
+        #wrapper {
+            width: 960px;
+            margin: 0px auto;
+            padding: 20px;
+        }
+
+        div#chatroom {
+            display: block;
+            height: 300px;
+            border: 1px solid #999;
+            
+            overflow: scroll;
+            width: 100%;
+            margin-bottom: 10px;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        ul#chat_log {
+            list-style: none;
+            position: absolute;
+            bottom: 0px;
+        }
+            ul#chat_log li {
+                margin: 10px 0px;
+               font-size: .8em;
+                
+            }
+        input#chat_box, input#chat_username {
+            width: 99%;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <h1>Node.js Chatroom</h1>
+    <div id="chatroom">
+        <ul id="chat_log">
+        </ul>
+    </div>
+    <input type="text" id="chat_username" name="chat_username" value="guest" placeholder="Type new username and then hit ENTER to submit" />
+    <input type="text" id="chat_box" name="chat_box" value="" placeholder="Type to chat and then hit ENTER to submit..." />
+</div>
+
+</body>
+</html>

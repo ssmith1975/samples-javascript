@@ -1,0 +1,19 @@
+﻿<% include header.ejs %>
+<h1><%= name %></h1>
+<h2>Ingrediants</h2>
+<div>
+	<ul>
+		<% ingredients.forEach( function (ingredient) { %>
+			<li><%= ingredient %></li>
+		<% }) %>
+	</ul>
+</div>
+<div>
+	<h2>Directions</h2>
+	<p><%= directions %></p>
+	
+</div>
+<div>
+	<a href="/recipes">Return to the recipes list</a>
+</div>
+<% include footer.ejs %>

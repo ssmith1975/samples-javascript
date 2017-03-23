@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Photos</title>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$.getJSON('http://127.0.0.1:5984/restaurant/_design/menu/_view/items',
+					function(data){
+						$.each(data.rows, function(index, row){
+							// Get image url
+							var image_url = 'http://127.0.0.1:5984/restaurant/' + row.id + '/' + row.value;
+							console.log('ImageId: ' + image_url);
+							// Append image to 'photos' div
+							$('#photos')
+								.append('<h2>' + row.key + '</h2>')
+								.append('<p><img src="' + image_url + '"/></p>');
+						}); // end each
+				}); // end getJSON
+			}); // end document
+		</script>
+	</head>
+	<body>
+		<div id="photos">
+			<h1>Our Menu</h1>
+		</div>
+	</body>
+</html>

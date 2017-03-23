@@ -1,0 +1,18 @@
+﻿<% include header.ejs %>
+<h1><%= title %></h1>
+<div>
+	<ul>
+		<% recipes.forEach( function (recipe) { %>
+			<li> 
+				<a href="/recipes/<%= recipe.url %>">
+					<%= recipe.name %>
+				</a>
+			</li>
+		<% }) %>
+	</ul>
+</div>
+
+<div>
+	<a href="/recipes/suggest">Suggest a recipe</a></p>
+</div>
+<% include footer.ejs %>

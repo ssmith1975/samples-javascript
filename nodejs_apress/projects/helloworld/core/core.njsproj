@@ -50,6 +50,7 @@
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="node_modules\" />
     <Folder Include="public\" />
     <Folder Include="node_modules\require.js\" />
     <Folder Include="node_modules\require.js\test\" />

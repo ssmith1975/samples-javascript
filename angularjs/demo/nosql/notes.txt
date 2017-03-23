@@ -1,0 +1,29 @@
+hours {"M": "10-9", "T": "10-9", "W": "10-9", "Th": "10-9", "F": "10-11", "Sa": "12-9", "Su": "12-9"}
+
+
+
+function(doc) {
+	if( doc.category ) {
+  		emit(doc.category, doc);
+	}
+
+}
+function(key, values, rereduce){
+	return values.length;
+}
+
+
+function(doc) {
+	if( doc._attachments ) {
+		var filename;
+		for(var key in doc._attachments ){
+			if(doc._attachments.hasOwnProperty(key) &&
+				(typeof(key) !== 'function')) {
+				filename = key;
+				break;
+			}
+		}
+  		emit(doc.category, filename);
+	}
+
+}
