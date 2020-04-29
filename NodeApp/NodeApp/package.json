@@ -8,7 +8,7 @@
     "email": ""
   },
   "dependencies": {
-    "jquery": "^1.12.4"
+    "jquery": "^3.5.0"
   },
   "devDependencies": {
     "body-parser": "^1.16.0",
